@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Video Background */
 #bg-video {
     position: fixed;
     top: 50%;
@@ -9,53 +10,39 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+    display: none; /* Initially hidden until loading screen is removed */
 }
 
+/* General Styles */
 body {
-   color: white;
+    color: white;
     background: #000;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-/* Profile Section */
-
-
-
-.badges {
-font-size: 23px;
-    background: rgba(0, 0, 0, 0.50); /* Slightly darker for better contrast */
-    border-radius: 20px; /* Smoother rounded edges */
-    padding: 5px 6px; /* More balanced padding */
-    display: flex; /* Ensures proper alignment */
-    gap: 15px; /* Space between badges */
-    align-items: center; /* Aligns badges vertically */
-    justify-content: center; /* Centers them if needed */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15); /* Subtle outer glow */
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Softer text glow */
-}
-
-
-
-
+/* Profile Section (Centered) */
 .profile-container {
-    margin: 50%;
-    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7); /* Slight transparency */
     border-radius: 15px;
     padding: 20px;
-      
-
 }
 
+/* Profile Picture */
 .profile-pic {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    border: 2px solid rgba(140, 140, 140, 0.5); /* Darker border */
-  box-shadow: 0 0 15px rgba(120, 120, 120, 0.6); /* Darker glow */
-  transition: 0.3s ease-in-out;
+    border: 2px solid rgba(140, 140, 140, 0.5);
+    box-shadow: 0 0 15px rgba(120, 120, 120, 0.6);
+    transition: 0.3s ease-in-out;
 }
 
+/* Username */
 .username {
     font-size: 2.2rem;
     font-weight: 600;
@@ -65,15 +52,27 @@ font-size: 23px;
 /* Typing Animation */
 #typing-text {
     font-size: 1.3rem;
-    color: Dark;
+    color: white;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(220, 220, 220, 0.9);
 }
 
+/* Badges */
+.badges {
+    font-size: 23px;
+    background: rgba(0, 0, 0, 0.50);
+    border-radius: 20px;
+    padding: 5px 6px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
 
 /* Loading Screen */
 .loading-screen {
-background-attachment: fixed;
     position: fixed;
     top: 0;
     left: 0;
@@ -88,16 +87,16 @@ background-attachment: fixed;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+/* Hide loading screen */
 .hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-
-
+/* Loading Text */
 .loading-text {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Increased from 1.3rem */
     color: white;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
@@ -119,11 +118,7 @@ background-attachment: fixed;
     100% { transform: scale(1.1); opacity: 1; }
 }
 
-
-
-
-
-/* social links icons */
+/* Social Links Icons */
 .social-icons {
     text-align: center;
 }
@@ -132,18 +127,17 @@ background-attachment: fixed;
     display: inline-block;
     text-decoration: none;
     position: relative;
-    margin: 0 15px; /* Space between icons */
+    margin: 0 15px;
 }
 
 .social-icons a img {
-    width: 40px; /* Ensure uniform size */
+    width: 40px;
     height: 40px;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
     transition: filter 0.3s ease-in-out;
-    vertical-align: middle; /* Prevents any extra space below images */
+    vertical-align: middle;
 }
 
 .social-icons a:hover img {
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
-
