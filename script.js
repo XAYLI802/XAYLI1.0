@@ -40,55 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Hide loading screen on click & start video
-const loadingScreen = document.querySelector(".loading-screen");
-loadingScreen.addEventListener("click", () => {
-    loadingScreen.classList.add("hidden");
-}
-
-// Auto-hide loading screen after 10s
-setTimeout(() => {
-    loadingScreen.classList.add("hidden");
-}, 60000);
-
-
-
-
-
-// Add event listeners for first interaction
-document.addEventListener("click", startMusic);
-document.addEventListener("scroll", startMusic);
-document.addEventListener("mousemove", startMusic);
-document.addEventListener("touchstart", startMusic, { passive: true }); // Fix for mobile
-
-
-
-
-
-
-// loading text animation 
-
 
 document.addEventListener("DOMContentLoaded", () => {
-    const textElement = document.querySelector('.loading-text');
-    const texts = [
+    const loadingScreen = document.querySelector(".loading-screen");
+    const loadingText = document.querySelector(".loading-text");
+    const video = document.querySelector("#bg-video");
+
+    // Loading Screen Typing Animation
+    const loadingMessages = [
         "CLICK ME👻", 
-        "🌐MADE 100% BY XAYLI802🌐", 
+        "MADE 100% BY XAYLI802🌐", 
         "HTML & CSS & JAVASCRIPT🔨", 
         "FOLLOW ME ON GITHUB🌐", 
-        "CLICK ME👻", 
-        "🌐..🔨..💬..👁️..🔒", 
         "FREE & BETTER 🔨"
     ];
 
-    let textIndex = 0;
+    let index = 0;
     let charIndex = 0;
     let isDeleting = false;
 
-    function typeText() {
-        if (!textElement) return; // Prevent errors if element is missing
-        const currentText = texts[textIndex];
-        textElement.innerHTML = currentText.substring(0, charIndex) + "<span>|</span>";
+    function typeLoadingText() {
+        if (!loadingText) return;
+        let currentText = loadingMessages[index];
+        loadingText.innerHTML = currentText.substring(0, charIndex) + "<span>|</span>";
 
         if (!isDeleting) {
             charIndex++;
@@ -99,17 +73,28 @@ document.addEventListener("DOMContentLoaded", () => {
             charIndex--;
             if (charIndex === 0) {
                 isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
+                index = (index + 1) % loadingMessages.length;
             }
         }
-        setTimeout(typeText, isDeleting ? 100 : 150);
+        setTimeout(typeLoadingText, isDeleting ? 100 : 150);
     }
 
-    typeText();
+    typeLoadingText(); // Start typing effect
+
+    // Hide loading screen & play video on click
+    loadingScreen.addEventListener("click", () => {
+        loadingScreen.classList.add("hidden");
+        video.style.display = "block"; // Show video
+        video.play(); // Start playing
+    });
+
+    // Auto-hide after 10s (if not clicked)
+    setTimeout(() => {
+        loadingScreen.classList.add("hidden");
+        video.style.display = "block"; 
+        video.play();
+    }, 10000);
 });
-
-
-
 
 
 
