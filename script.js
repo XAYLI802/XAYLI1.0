@@ -146,3 +146,22 @@ function createEmoji() {
 
 // Start the effect
 setInterval(createEmoji, 150);
+
+
+
+
+
+const video = document.getElementById("bg-video");
+const muteBtn = document.getElementById("mute-btn");
+const soundOnImg = "sound-on.png"; // Unmuted image
+const soundOffImg = "sound-off.png"; // Muted image
+
+muteBtn.addEventListener("click", () => {
+    if (video.muted) {
+        video.muted = false;
+        muteBtn.querySelector("img").src = soundOnImg;
+    } else {
+        video.muted = true;
+        muteBtn.querySelector("img").src = soundOffImg;
+    }
+});
