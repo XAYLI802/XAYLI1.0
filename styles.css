@@ -176,3 +176,21 @@ body {
 .social-icons a:hover img {
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
+
+/* Mute button styling */
+#mute-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    filter: grayscale(100%); /* Makes the image black and white */
+}
+
+#mute-btn img {
+    width: 100%;
+    height: 100%;
+}
