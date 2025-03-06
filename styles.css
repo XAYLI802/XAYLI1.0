@@ -15,6 +15,7 @@
 
 /* General Styles */
 body {
+    overflow: hidden;
     color: white;
     background: #000;
     font-family: 'Poppins', sans-serif;
@@ -27,7 +28,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 1); /* Slight transparency */
+    background: rgba(0, 0, 0, 0); /* Slight transparency */
     border-radius: 15px;
     padding: 20px;
     width: 380px; /* Increased width for better alignment */
