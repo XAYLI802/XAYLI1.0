@@ -33,6 +33,17 @@ body {
     padding: 20px;
     width: 380px; /* Increased width for better alignment */
     max-width: 90vw; /* Prevents overflow on smaller screens */
+    
+    /* Fade-in Animation (Starts Hidden) */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Fade-in Effect (Applied After Loading) */
+.profile-container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Profile Picture */
