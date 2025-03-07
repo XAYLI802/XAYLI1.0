@@ -153,8 +153,8 @@ setInterval(createEmoji, 150);
 
 const video = document.getElementById("bg-video");
 const muteBtn = document.getElementById("mute-btn");
-const soundOnImg = "sound-on.png"; // Unmuted image
-const soundOffImg = "sound-off.png"; // Muted image
+const soundOnImg = "https://i.imgur.com/eBgCXhT.png"; // Unmuted image
+const soundOffImg = "https://i.imgur.com/c1okSDi.png"; // Muted image
 
 muteBtn.addEventListener("click", () => {
     if (video.muted) {
