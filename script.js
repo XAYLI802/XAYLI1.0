@@ -81,11 +81,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeLoadingText(); // Start typing effect
 
+    document.addEventListener("DOMContentLoaded", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    const video = document.getElementById("video");
+
+    // Ensure the loading screen is visible on page load
+    loadingScreen.classList.remove("hidden");
+
     // Hide loading screen & play video on click
-loadingScreen.addEventListener("click", () => {
-    loadingScreen.classList.add("hidden");
-    video.style.display = "block"; // Show video
-    video.play(); // Start playing
+    loadingScreen.addEventListener("click", () => {
+        loadingScreen.classList.add("hidden");
+        video.style.display = "block"; // Show video
+        video.play(); // Start playing
+    });
 });
 
     
