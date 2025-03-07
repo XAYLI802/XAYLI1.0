@@ -110,7 +110,7 @@ style.innerHTML = `
     @keyframes fall {
         to {
             transform: translateY(110vh);
-            opacity: 0;
+            opacity: 0.3;
         }
     }
 `;
