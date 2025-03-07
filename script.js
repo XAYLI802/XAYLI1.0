@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loadingScreen.classList.add("hidden");
         video.style.display = "block"; 
         video.play();
-    }, 10000);
+    }, 200000);
 });
 
 
