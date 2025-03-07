@@ -88,13 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         video.play(); // Start playing
     });
 
-    // Auto-hide after 10s (if not clicked)
-    setTimeout(() => {
-        loadingScreen.classList.add("hidden");
-        video.style.display = "block"; 
-        video.play();
-    }, 200000);
-});
+    
 
 
 
