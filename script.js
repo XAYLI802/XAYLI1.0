@@ -38,15 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
     typeText();
 });
 
-
-
+// =======================================
+// LOADING SCREEN LOGIC
+// =======================================
 
 document.addEventListener("DOMContentLoaded", () => {
     const loadingScreen = document.querySelector(".loading-screen");
     const loadingText = document.querySelector(".loading-text");
-    const video = document.querySelector("#bg-video");
+    const video = document.getElementById("bg-video");
 
-    // Loading Screen Typing Animation
+    // Ensure loading screen starts visible
+    loadingScreen.classList.remove("hidden");
+
+    // Typing animation for loading text
     const loadingMessages = [
         "CLICK ME👻", 
         "MADE 100% BY XAYLI802🌐", 
@@ -81,13 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeLoadingText(); // Start typing effect
 
-    document.addEventListener("DOMContentLoaded", () => {
-    const loadingScreen = document.getElementById("loading-screen");
-    const video = document.getElementById("video");
-
-    // Ensure the loading screen is visible on page load
-    loadingScreen.classList.remove("hidden");
-
     // Hide loading screen & play video on click
     loadingScreen.addEventListener("click", () => {
         loadingScreen.classList.add("hidden");
@@ -96,13 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-    
-
-
-
-
-//emojis rain 
-
+// =======================================
+// EMOJI RAIN EFFECT
+// =======================================
 
 const emojis = ['❄️'];
 
@@ -149,9 +142,9 @@ function createEmoji() {
 // Start the effect
 setInterval(createEmoji, 150);
 
-
-
-
+// =======================================
+// VIDEO MUTE BUTTON
+// =======================================
 
 const video = document.getElementById("bg-video");
 const muteBtn = document.getElementById("mute-btn");
