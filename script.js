@@ -176,11 +176,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const profileContainer = document.querySelector(".profile-container");
 
     loadingScreen.addEventListener("click", () => {
-        loadingScreen.classList.add("hidden"); // Hide loading screen
+        loadingScreen.classList.add("hidden");
 
-        // Delay fade-in effect slightly for smooth transition
+        // Ensure the profile smoothly fades in without moving
         setTimeout(() => {
             profileContainer.classList.add("fade-in");
-        }, 500);
+        }, 500); // Small delay for a natural transition
     });
 });
