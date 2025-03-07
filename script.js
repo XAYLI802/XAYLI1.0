@@ -153,19 +153,16 @@ setInterval(createEmoji, 150);
 
 const video = document.getElementById("bg-video");
 const muteBtn = document.getElementById("mute-btn");
+const muteImg = muteBtn.querySelector("img");
 const soundOnImg = "https://i.imgur.com/eBgCXhT.png"; // Unmuted image
 const soundOffImg = "https://i.imgur.com/c1okSDi.png"; // Muted image
 
-// Ensure the image loads when the page loads
-const muteImg = muteBtn.querySelector("img");
-muteImg.src = video.muted ? soundOffImg : soundOnImg;
+// Set the correct image when the page loads
+window.addEventListener("DOMContentLoaded", () => {
+    muteImg.src = video.muted ? soundOffImg : soundOnImg;
+});
 
 muteBtn.addEventListener("click", () => {
-    if (video.muted) {
-        video.muted = false;
-        muteImg.src = soundOnImg;
-    } else {
-        video.muted = true;
-        muteImg.src = soundOffImg;
-    }
+    video.muted = !video.muted;
+    muteImg.src = video.muted ? soundOffImg : soundOnImg;
 });
