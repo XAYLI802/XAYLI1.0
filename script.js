@@ -82,11 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
     typeLoadingText(); // Start typing effect
 
     // Hide loading screen & play video on click
-    loadingScreen.addEventListener("click", () => {
-        loadingScreen.classList.add("hidden");
-        video.style.display = "block"; // Show video
-        video.play(); // Start playing
-    });
+loadingScreen.addEventListener("click", () => {
+    loadingScreen.classList.add("hidden");
+    video.style.display = "block"; // Show video
+    video.play(); // Start playing
+});
 
     
 
