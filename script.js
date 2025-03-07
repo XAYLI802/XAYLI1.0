@@ -156,12 +156,16 @@ const muteBtn = document.getElementById("mute-btn");
 const soundOnImg = "https://i.imgur.com/eBgCXhT.png"; // Unmuted image
 const soundOffImg = "https://i.imgur.com/c1okSDi.png"; // Muted image
 
+// Ensure the image loads when the page loads
+const muteImg = muteBtn.querySelector("img");
+muteImg.src = video.muted ? soundOffImg : soundOnImg;
+
 muteBtn.addEventListener("click", () => {
     if (video.muted) {
         video.muted = false;
-        muteBtn.querySelector("img").src = soundOnImg;
+        muteImg.src = soundOnImg;
     } else {
         video.muted = true;
-        muteBtn.querySelector("img").src = soundOffImg;
+        muteImg.src = soundOffImg;
     }
 });
