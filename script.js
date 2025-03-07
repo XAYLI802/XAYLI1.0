@@ -161,3 +161,26 @@ muteBtn.addEventListener("click", () => {
     video.muted = !video.muted;
     muteImg.src = video.muted ? soundOffImg : soundOnImg;
 });
+
+
+
+
+// fade in animation 
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loadingScreen = document.querySelector(".loading-screen");
+    const profileContainer = document.querySelector(".profile-container");
+
+    loadingScreen.addEventListener("click", () => {
+        loadingScreen.classList.add("hidden"); // Hide loading screen
+
+        // Delay fade-in effect slightly for smooth transition
+        setTimeout(() => {
+            profileContainer.classList.add("fade-in");
+        }, 500);
+    });
+});
