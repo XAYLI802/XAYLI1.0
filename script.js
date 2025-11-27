@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const texts = [
         "MADE BY XAYLI802", 
         "🌐XAYLI ON TOP🌐", 
-        "VRrTnKfjX3sMG5YPdVsFCVXFCASyQ3z7AHodrufVRosYcBKq57pvpXjUPZ6m",
+        "SSB3YW5uYQ==",
         "🔨HTML & CSS & JAVASCRIPT🔨",
-        "JEQHOYLOOQQHI3ZANNUWY3BANV4XGZLMMYQGE5LUEBUSAZDPNYTXIIDXMFXHIIDUN4QGEZJAMZXXEZ3POR2GK3RA", 
+        "S2lsbCBteXNlbGY=", 
         "🌐..🔨..💬..👁️..🔒"
     ];
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loadingMessages = [
         "CLICK ME👻", 
         "...👁️...👁️‍🗨️...", 
-        "U2xlZXBpbmcgZm9yZXZlciDimb7vuI8="
+        "S2lsbCBteXNlbGY="
     ];
 
     let index = 0;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // EMOJI RAIN EFFECT
 // =======================================
 
-const emojis = ['👁️‍🗨️'];
+const emojis = ['0'];
 
 // Create the keyframes animation dynamically
 const style = document.createElement('style');
