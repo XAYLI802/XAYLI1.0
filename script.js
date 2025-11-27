@@ -3,12 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const texts = [
         "MADE BY XAYLI802", 
         "🌐XAYLI ON TOP🌐", 
-        "🔨HTML & CSS & JAVASCRIPT🔨", 
-        "🌐FOLLOW ME ON GITHUB🌐", 
-        "🗂️SOURCE CODE ON MY GITHUB",
-        "🆓FREE & 100% CUSTOMIZABLE", 
-        "🌐..🔨..💬..👁️..🔒", 
-        "🎉FREE & BETTER🔨"
+        "VRrTnKfjX3sMG5YPdVsFCVXFCASyQ3z7AHodrufVRosYcBKq57pvpXjUPZ6m",
+        "🔨HTML & CSS & JAVASCRIPT🔨",
+        "JEQHOYLOOQQHI3ZANNUWY3BANV4XGZLMMYQGE5LUEBUSAZDPNYTXIIDXMFXHIIDUN4QGEZJAMZXXEZ3POR2GK3RA", 
+        "🌐..🔨..💬..👁️..🔒"
     ];
 
     let textIndex = 0;
@@ -53,10 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Typing animation for loading text
     const loadingMessages = [
         "CLICK ME👻", 
-        "MADE 100% BY XAYLI802🌐", 
-        "HTML & CSS & JAVASCRIPT🔨", 
-        "FOLLOW ME ON GITHUB🌐", 
-        "FREE & BETTER 🔨"
+        "...👁️...👁️‍🗨️...", 
+        "U2xlZXBpbmcgZm9yZXZlciDimb7vuI8="
     ];
 
     let index = 0;
@@ -97,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // EMOJI RAIN EFFECT
 // =======================================
 
-const emojis = ['❄️'];
+const emojis = ['👁️‍🗨️'];
 
 // Create the keyframes animation dynamically
 const style = document.createElement('style');
