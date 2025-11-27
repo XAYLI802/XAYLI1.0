@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // EMOJI RAIN EFFECT
 // =======================================
 
-const emojis = ['0'];
+const emojis = ['∞'];
 
 // Create the keyframes animation dynamically
 const style = document.createElement('style');
