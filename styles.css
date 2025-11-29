@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Video Background */
 #bg-video {
     position: fixed;
     top: 50%;
@@ -10,10 +9,9 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    display: none; /* Initially hidden until loading screen is removed */
+    display: none;
 }
 
-/* General Styles */
 body {
     overflow: hidden;
     color: white;
@@ -22,7 +20,6 @@ body {
     text-align: center;
 }
 
-/* Profile Container (No position changes) */
 .profile-container {
     position: absolute;
     top: 50%;
@@ -34,19 +31,15 @@ body {
     width: 380px;
     z-index: 2;
     max-width: 90vw;
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
     transition: opacity 1.2s ease-out, transform 1s ease-out;
 }
 
-/* Fade-in effect */
 .profile-container.fade-in {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 
-
-
-/* Profile Picture */
 .profile-pic {
     width: 110px;
     height: 110px;
@@ -57,14 +50,12 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-/* Username */
 .username {
     font-size: 2.2rem;
     font-weight: 600;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
 
-/* Typing Animation */
 #typing-text {
     font-size: 1.3rem;
     color: white;
@@ -72,7 +63,6 @@ body {
     text-shadow: 0 0 10px rgba(220, 220, 220, 0.9);
 }
 
-/* Badges */
 .badges {
     font-size: 23px;
     background: rgba(0, 0, 0, 0.50);
@@ -86,7 +76,6 @@ body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
-/* Social Links Icons - Ensures they stay in one line */
 .social-icons {
     text-align: center;
     margin-top: 10px;
@@ -96,7 +85,7 @@ body {
     display: inline-block;
     text-decoration: none;
     position: relative;
-    margin: 0 10px; /* Space between icons */
+    margin: 0 10px;
 }
 
 .social-icons a img {
@@ -111,14 +100,12 @@ body {
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
 
-/* Responsive Tweaks */
 @media (max-width: 400px) {
     .profile-container {
-        width: 95vw; /* Makes sure it doesn't overflow on very small screens */
+        width: 95vw;
     }
 }
 
-/* Loading Screen */
 .loading-screen {
     position: fixed;
     top: 0;
@@ -134,22 +121,19 @@ body {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-/* Hide loading screen */
 .hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-/* Loading Text */
 .loading-text {
-    font-size: 1.5rem; /* Increased from 1.3rem */
+    font-size: 1.5rem;
     color: white;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
 
-/* Animated Guardian Symbol */
 #guardian {
     position: absolute;
     width: 200px;
@@ -165,31 +149,6 @@ body {
     100% { transform: scale(1.1); opacity: 1; }
 }
 
-/* Social Links Icons */
-.social-icons {
-    text-align: center;
-}
-
-.social-icons a {
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    margin: 0 15px;
-}
-
-.social-icons a img {
-    width: 40px;
-    height: 40px;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-    transition: filter 0.3s ease-in-out;
-    vertical-align: middle;
-}
-
-.social-icons a:hover img {
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
-}
-
-/* Mute button styling */
 #mute-btn {
     position: fixed;
     top: 20px;
@@ -199,8 +158,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
- filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
-    
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
 #mute-btn img {
