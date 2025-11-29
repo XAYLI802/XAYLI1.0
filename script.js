@@ -5,10 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "👁️‍🗨️you are being watched👁️‍🗨️", 
         "SSB3YW5uYQ==",
         "Silent But i always was tHere",
-        "analyzes and watch",
+        "I'm so tired I'll just go to",
+        "Sleep...",
         "S2lsbCBteXNlbGY=",
         "SBH",
-        "🌐..🔨..💬..👁️..🔒"
+        "🌐..🔨..😶..👁️..🔓"
+        "All i need is an Email",
+        "If you're reading this. i guess",
+        "It worked...",
     ];
 
     let textIndex = 0;
