@@ -98,13 +98,10 @@ const emojis = [
   "No one will remember you",
   "Everything you try ends in failure",
   "You are alone",
-  "You don't realize how lucky you are",
-  "I want to sleep and never wake up again",
-  "A permanent decision for a temporary problem",
   "Life goes on without you"
 ];
 
-// Container to prevent text from overflowing the body
+// Container to hold emojis
 const container = document.createElement('div');
 Object.assign(container.style, {
     position: 'fixed',
@@ -112,8 +109,9 @@ Object.assign(container.style, {
     left: 0,
     width: '100vw',
     height: '100vh',
-    overflow: 'hidden', // prevents stretching
+    overflow: 'hidden',
     pointerEvents: 'none',
+    zIndex: 1 // emojis behind profile
 });
 document.body.appendChild(container);
 
@@ -129,6 +127,11 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+// Make sure profile section is above emojis
+const profile = document.querySelector('.profile-container');
+profile.style.position = 'relative';
+profile.style.zIndex = '10'; // above emoji rain
+
 function createEmoji() {
     const emoji = document.createElement('div');
     emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
@@ -137,26 +140,17 @@ function createEmoji() {
     const emojiSize = Math.random() * 0.7 + 1;
     const duration = Math.random() * 3 + 2;
 
-    // Apply temporary styles to measure text width
     Object.assign(emoji.style, {
         fontSize: `${emojiSize}rem`,
         position: "absolute",
-        top: "-10vh",
         whiteSpace: "nowrap",
         pointerEvents: "none",
-        userSelect: "none"
+        userSelect: "none",
+        top: "-10vh",
+        left: `${Math.random() * (window.innerWidth - emoji.offsetWidth)}px`,
+        animation: `fall ${duration}s linear forwards`
     });
 
-    // Measure text width and limit start position
-    const textWidth = emoji.offsetWidth;
-    const maxX = window.innerWidth - textWidth;
-    const startX = Math.random() * (maxX > 0 ? maxX : 0);
-
-    // Apply final styles
-    emoji.style.left = `${startX}px`;
-    emoji.style.animation = `fall ${duration}s linear forwards`;
-
-    // Remove after animation
     setTimeout(() => emoji.remove(), duration * 1000);
 }
 
