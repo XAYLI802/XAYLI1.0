@@ -93,7 +93,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // EMOJI RAIN EFFECT
 // =======================================
 
-const emojis = ['∞'];
+const emojis = [
+  "You are nothing",
+  "No one will remember you",
+  "Everything you try ends in failure",
+  "You are alone",
+  "Life goes on without you"];
 
 // Create the keyframes animation dynamically
 const style = document.createElement('style');
