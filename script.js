@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "MADE BY Someone who can't even memories names", 
         "👁️‍🗨️you are being watched👁️‍🗨️", 
         "SSB3YW5uYQ==",
-        "HTML & CSS & JAVASCRIPT",
-        "S2lsbCBteXNlbGY=", 
+        "Silent But i always was tHere",
+        "analyzes and watch",
+        "S2lsbCBteXNlbGY=",
+        "SBH",
         "🌐..🔨..💬..👁️..🔒"
     ];
 
@@ -96,8 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const emojis = [
   "You are nothing",
   "No one will remember you",
-  "Everything you try ends in failure",
+  "Everything you try",
+  "Silent But Here",
   "You are alone",
+  "Ends in failure",
   "Life goes on without you"
 ];
 
