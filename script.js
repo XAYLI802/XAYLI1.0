@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "🌐..🔨..😶..👁️..🔓"
         "All i need is an Email",
         "If you're reading this. i guess",
-        "It worked...",
+        "It worked..."
     ];
 
     let textIndex = 0;
