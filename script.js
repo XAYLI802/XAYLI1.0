@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Sleep...",
         "S2lsbCBteXNlbGY=",
         "SBH",
-        "🌐..🔨..😶..👁️..🔓"
+        "🌐..🔨..😶..👁️..🔓",
         "All i need is an Email",
         "If you're reading this. i guess",
         "It worked..."
