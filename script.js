@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const textElement = document.querySelector('#typing-text');
     const texts = [
-        "MADE BY XAYLI802", 
+        "MADE BY Someone who can't even memories names", 
         "👁️‍🗨️you are being watched👁️‍🗨️", 
         "SSB3YW5uYQ==",
         "HTML & CSS & JAVASCRIPT",
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Typing animation for loading text
     const loadingMessages = [
-        "CLICK ME👻", 
+        "CLICK ME.", 
         "...👁️...👁️‍🗨️...", 
         "S2lsbCBteXNlbGY="
     ];
@@ -98,6 +98,9 @@ const emojis = [
   "No one will remember you",
   "Everything you try ends in failure",
   "You are alone",
+  "You don't realize how lucky you are",
+  "I want to sleep and never wake up again",
+  "A permanent decision for a temporary problem",
   "Life goes on without you"
 ];
 
