@@ -101,7 +101,7 @@ const emojis = [
   "Life goes on without you"
 ];
 
-// Container to hold emojis behind everything
+// Container to prevent text from overflowing the body
 const container = document.createElement('div');
 Object.assign(container.style, {
     position: 'fixed',
@@ -109,9 +109,8 @@ Object.assign(container.style, {
     left: 0,
     width: '100vw',
     height: '100vh',
-    overflow: 'hidden',
+    overflow: 'hidden', // prevents stretching
     pointerEvents: 'none',
-    zIndex: '0' // ensure it stays behind the profile
 });
 document.body.appendChild(container);
 
@@ -135,18 +134,26 @@ function createEmoji() {
     const emojiSize = Math.random() * 0.7 + 1;
     const duration = Math.random() * 3 + 2;
 
-    // Apply styles
+    // Apply temporary styles to measure text width
     Object.assign(emoji.style, {
         fontSize: `${emojiSize}rem`,
         position: "absolute",
+        top: "-10vh",
         whiteSpace: "nowrap",
         pointerEvents: "none",
-        userSelect: "none",
-        top: "-10vh",
-        left: `${Math.random() * (window.innerWidth - emoji.offsetWidth)}px`,
-        animation: `fall ${duration}s linear forwards`
+        userSelect: "none"
     });
 
+    // Measure text width and limit start position
+    const textWidth = emoji.offsetWidth;
+    const maxX = window.innerWidth - textWidth;
+    const startX = Math.random() * (maxX > 0 ? maxX : 0);
+
+    // Apply final styles
+    emoji.style.left = `${startX}px`;
+    emoji.style.animation = `fall ${duration}s linear forwards`;
+
+    // Remove after animation
     setTimeout(() => emoji.remove(), duration * 1000);
 }
 
