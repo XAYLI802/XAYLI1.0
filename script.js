@@ -109,8 +109,9 @@ Object.assign(container.style, {
     left: 0,
     width: '100vw',
     height: '100vh',
-    overflow: 'hidden', // prevents stretching
+    overflow: 'hidden',
     pointerEvents: 'none',
+    zIndex: 1 // emojis behind profile
 });
 document.body.appendChild(container);
 
