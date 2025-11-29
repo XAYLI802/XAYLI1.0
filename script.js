@@ -101,7 +101,7 @@ const emojis = [
   "Life goes on without you"
 ];
 
-// Container to hold emojis
+// Container to hold emojis behind everything
 const container = document.createElement('div');
 Object.assign(container.style, {
     position: 'fixed',
@@ -111,7 +111,7 @@ Object.assign(container.style, {
     height: '100vh',
     overflow: 'hidden',
     pointerEvents: 'none',
-    zIndex: 1 // emojis behind profile
+    zIndex: '0' // ensure it stays behind the profile
 });
 document.body.appendChild(container);
 
@@ -127,11 +127,6 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-// Make sure profile section is above emojis
-const profile = document.querySelector('.profile-container');
-profile.style.position = 'relative';
-profile.style.zIndex = '10'; // above emoji rain
-
 function createEmoji() {
     const emoji = document.createElement('div');
     emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
@@ -140,6 +135,7 @@ function createEmoji() {
     const emojiSize = Math.random() * 0.7 + 1;
     const duration = Math.random() * 3 + 2;
 
+    // Apply styles
     Object.assign(emoji.style, {
         fontSize: `${emojiSize}rem`,
         position: "absolute",
