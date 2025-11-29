@@ -98,7 +98,8 @@ const emojis = [
   "No one will remember you",
   "Everything you try ends in failure",
   "You are alone",
-  "Life goes on without you"];
+  "Life goes on without you"
+];
 
 // Create the keyframes animation dynamically
 const style = document.createElement('style');
@@ -117,27 +118,33 @@ function createEmoji() {
     emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     document.body.appendChild(emoji);
 
-    // Random size and position
+    // Random size
     const emojiSize = Math.random() * 0.7 + 1;
-    const maxX = window.innerWidth - emojiSize * 20; // Prevents off-screen spawning
-    const startX = Math.random() * maxX;
-    const duration = Math.random() * 3 + 2; // 2s - 5s fall duration
+    emoji.style.fontSize = `${emojiSize}rem`;
 
-    // Apply styles directly
+    // Measure text width
+    const textWidth = emoji.offsetWidth;
+
+    // Random horizontal start position within screen bounds
+    const maxX = window.innerWidth - textWidth;
+    const startX = Math.random() * maxX;
+
+    // Random fall duration
+    const duration = Math.random() * 3 + 2; // 2s - 5s
+
+    // Apply styles
     Object.assign(emoji.style, {
         position: "absolute",
         top: "-10vh",
         left: `${startX}px`,
-        fontSize: `${emojiSize}rem`,
         pointerEvents: "none",
         userSelect: "none",
+        whiteSpace: "nowrap", // Prevent text wrapping
         animation: `fall ${duration}s linear forwards`
     });
 
-    // Remove emoji after animation
-    setTimeout(() => {
-        emoji.remove();
-    }, duration * 1000);
+    // Remove after animation
+    setTimeout(() => emoji.remove(), duration * 1000);
 }
 
 // Start the effect
