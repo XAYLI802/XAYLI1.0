@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const textElement = document.querySelector('#typing-text');
     const texts = [
-        "MADE BY Someone who can't even memories names", 
-        "👁️‍🗨️you are being watched👁️‍🗨️", 
-        "SSB3YW5uYQ==",
-        "Silent But i always was tHere",
-        "I'm so tired I'll just go to",
-        "Sleep...",
-        "S2lsbCBteXNlbGY=",
-        "SBH",
-        "🌐..🔨..😶..👁️..🔓",
-        "All i need is an Email",
-        "If you're reading this. i guess",
-        "It worked..."
-    ];
+    "MADE BY someone who can't even remember names", 
+    "👁️‍🗨️ You are being watched 👁️‍🗨️", 
+    "SSB3YW5uYQ==", // Base64
+    "Silent, but I always was tHere",
+    "I'm so tired... I'll just go to",
+    "Sleep...",
+    "S2lsbCBteXNlbGY=", // Base64
+    "SBH",
+    "🌐..🔨..😶..👁️..🔓",
+    "All I need is an email",
+    "If you're reading this, I guess",
+    "It worked..."
+];
 
     let textIndex = 0;
     let charIndex = 0;
