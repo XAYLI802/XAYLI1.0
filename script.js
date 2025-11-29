@@ -103,11 +103,20 @@ const emojis = [
   "You are nothing",
   "No one will remember you",
   "Everything you try",
-  "Silent But Here",
+  "Silent but here",
   "You are alone",
   "Ends in failure",
   "Life goes on without you",
-  "Are you always this quite?"
+  "Are you always this quiet?",
+  "I speak, but no one listens",
+  "What's the point?",
+  "You don't care, do you?",
+  "Dreaming is bad nowadays",
+  "People forget quickly",
+  "You'll probably forget",
+  "People who don't care",
+  "About what others think of them",
+  "Are so lucky"
 ];
 
 // Container to prevent text from overflowing the body
