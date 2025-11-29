@@ -106,7 +106,8 @@ const emojis = [
   "Silent But Here",
   "You are alone",
   "Ends in failure",
-  "Life goes on without you"
+  "Life goes on without you",
+  "Are you always this quite?"
 ];
 
 // Container to prevent text from overflowing the body
