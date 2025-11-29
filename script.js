@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Typing animation for loading text
     const loadingMessages = [
         "CLICK ME.", 
-        "...👁️...👁️‍🗨️...", 
+        "CLICK ME...", 
         "S2lsbCBteXNlbGY="
     ];
 
