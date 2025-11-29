@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =======================================
-// EMOJI RAIN EFFECT
+// EMOJI RAIN EFFECT i hate the rain
 // =======================================
 
 const emojis = [
@@ -101,7 +101,20 @@ const emojis = [
   "Life goes on without you"
 ];
 
-// Create the keyframes animation dynamically
+// Container to prevent text from overflowing the body
+const container = document.createElement('div');
+Object.assign(container.style, {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    overflow: 'hidden', // <-- prevents stretching
+    pointerEvents: 'none',
+});
+document.body.appendChild(container);
+
+// Keyframes
 const style = document.createElement('style');
 style.innerHTML = `
     @keyframes fall {
@@ -116,38 +129,25 @@ document.head.appendChild(style);
 function createEmoji() {
     const emoji = document.createElement('div');
     emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-    document.body.appendChild(emoji);
+    container.appendChild(emoji);
 
-    // Random size
     const emojiSize = Math.random() * 0.7 + 1;
-    emoji.style.fontSize = `${emojiSize}rem`;
+    const duration = Math.random() * 3 + 2;
 
-    // Measure text width
-    const textWidth = emoji.offsetWidth;
-
-    // Random horizontal start position within screen bounds
-    const maxX = window.innerWidth - textWidth;
-    const startX = Math.random() * maxX;
-
-    // Random fall duration
-    const duration = Math.random() * 3 + 2; // 2s - 5s
-
-    // Apply styles
     Object.assign(emoji.style, {
         position: "absolute",
         top: "-10vh",
-        left: `${startX}px`,
+        left: `${Math.random() * window.innerWidth}px`,
+        fontSize: `${emojiSize}rem`,
+        whiteSpace: "nowrap",
         pointerEvents: "none",
         userSelect: "none",
-        whiteSpace: "nowrap", // Prevent text wrapping
         animation: `fall ${duration}s linear forwards`
     });
 
-    // Remove after animation
     setTimeout(() => emoji.remove(), duration * 1000);
 }
 
-// Start the effect
 setInterval(createEmoji, 150);
 
 // =======================================
