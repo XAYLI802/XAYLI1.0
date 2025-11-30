@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function typeText() {
         if (!textElement) return;
         const currentText = texts[textIndex];
-        textElement.innerHTML = currentText.substring(0, charIndex) + "<span>|</span>";
+        textElement.innerHTML = currentText.substring(0, charIndex) + "<span style='font-weight:bold;'>|</span>";
 
         if (!isDeleting) {
             charIndex++;
