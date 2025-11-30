@@ -229,12 +229,13 @@ function updateTitle() {
         currentIndex--;
         if (currentIndex <= 0) {
             typingForward = true;
-           
             currentTitleIndex = (currentTitleIndex + 1) % titles.length;
         }
     }
 
-    document.title = targetTitle.substring(0, currentIndex) || "";
+    document.title = typingForward
+        ? targetTitle.substring(0, currentIndex)
+        : "..." + targetTitle.substring(currentIndex);
 }
 
 setInterval(updateTitle, 500);
