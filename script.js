@@ -237,4 +237,4 @@ function updateTitle() {
     document.title = targetTitle.substring(0, currentIndex) || "";
 }
 
-setInterval(updateTitle, 200);
+setInterval(updateTitle, 500);
