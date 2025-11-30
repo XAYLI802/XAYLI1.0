@@ -126,7 +126,8 @@ const emojis = [
   "RnJvbSB0aGlzIHBhaW4=",
   "VGFsayB0byBzb21lb25lIHlvdSB0cnVzdA==",
   "TWF5YmUgSSdtIGp1c3Qgb3ZlcnRoaW5raW5nPw==",
-  "SXMgdGhpcyBkZXByZXNzaW9uPw=="
+  "SXMgdGhpcyBkZXByZXNzaW9uPw==",
+  "KRSXG5AFOI======KRSXG5AFOI"
 ];
 
 const container = document.createElement('div');
