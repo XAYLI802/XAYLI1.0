@@ -209,3 +209,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500);
     });
 });
+
+
+
+const titles = ["SBH", "S B H", "SilentButHere"];
+let currentTitleIndex = 0;
+let currentIndex = 0;
+let typingForward = true;
+
+function updateTitle() {
+    const targetTitle = titles[currentTitleIndex];
+
+    if (typingForward) {
+        currentIndex++;
+        if (currentIndex >= targetTitle.length) {
+            typingForward = false;
+        }
+    } else {
+        currentIndex--;
+        if (currentIndex <= 0) {
+            typingForward = true;
+           
+            currentTitleIndex = (currentTitleIndex + 1) % titles.length;
+        }
+    }
+
+    document.title = targetTitle.substring(0, currentIndex) || "";
+}
+
+setInterval(updateTitle, 200);
