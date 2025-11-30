@@ -233,9 +233,10 @@ function updateTitle() {
         }
     }
 
-    document.title = typingForward
-        ? targetTitle.substring(0, currentIndex)
-        : "..." + targetTitle.substring(currentIndex);
+    let displayTitle = targetTitle.substring(0, currentIndex);
+    if (!displayTitle) displayTitle = "...";
+
+    document.title = displayTitle;
 }
 
 setInterval(updateTitle, 500);
