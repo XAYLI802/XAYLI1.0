@@ -42,6 +42,47 @@ document.addEventListener("DOMContentLoaded", () => {
     typeText();
 });
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const textElement = document.querySelector('.badges');
+    const texts = [
+        "SBH",
+        "S B H",
+        "SilentButHere"
+    ];
+
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeText() {
+        if (!textElement) return;
+
+        const currentText = texts[textIndex];
+        textElement.innerHTML = currentText.substring(0, charIndex) + "<span>|</span>";
+
+        if (!isDeleting) {
+            charIndex++;
+            if (charIndex > currentText.length) {
+                setTimeout(() => isDeleting = true, 1000);
+            }
+        } else {
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+        }
+
+        setTimeout(typeText, isDeleting ? 100 : 150);
+    }
+
+    typeText();
+});
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const loadingScreen = document.querySelector(".loading-screen");
     const loadingText = document.querySelector(".loading-text");
