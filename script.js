@@ -223,7 +223,7 @@ function createEmoji() {
 }
 
 setInterval(createEmoji, 150);
-
+/*
 const video = document.getElementById("bg-video");
 const muteBtn = document.getElementById("mute-btn");
 const muteImg = muteBtn.querySelector("img");
@@ -238,6 +238,10 @@ muteBtn.addEventListener("click", () => {
     video.muted = !video.muted;
     muteImg.src = video.muted ? soundOffImg : soundOnImg;
 });
+
+Desactivated
+
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
     const loadingScreen = document.querySelector(".loading-screen");
