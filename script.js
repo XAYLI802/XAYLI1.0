@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const emojis = [
+const _dGhhbmtzIGZvciB0cnlpbmc = [
   "WW91IGFyZSBub3RoaW5n",
   "Tm8gb25lIHdpbGwgcmVtZW1iZXIgeW91",
   "RXZlcnl0aGluZyB5b3UgdHJ5IGZhaWxz",
@@ -195,16 +195,16 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-function createEmoji() {
-    const emoji = document.createElement('div');
-    emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-    container.appendChild(emoji);
+function _105_109_32_97_108_115_111_32_118_101_114_121_32_99_117_114_105_111_117_115() {
+    const _bXkgbmFtZSBpcyBTQkg = document.createElement('div');
+    _bXkgbmFtZSBpcyBTQkg.innerText = _dGhhbmtzIGZvciB0cnlpbmc[Math.floor(Math.random() * _dGhhbmtzIGZvciB0cnlpbmc.length)];
+    container.appendChild(_bXkgbmFtZSBpcyBTQkg);
 
-    const emojiSize = Math.random() * 0.7 + 1;
+    const _aSBuZXZlciBoYWQgYSBnZg = Math.random() * 0.7 + 1;
     const duration = Math.random() * 3 + 2;
 
-    Object.assign(emoji.style, {
-        fontSize: `${emojiSize}rem`,
+    Object.assign(_bXkgbmFtZSBpcyBTQkg.style, {
+        fontSize: `${_aSBuZXZlciBoYWQgYSBnZg}rem`,
         position: "absolute",
         top: "-10vh",
         whiteSpace: "nowrap",
@@ -212,17 +212,17 @@ function createEmoji() {
         userSelect: "none"
     });
 
-    const textWidth = emoji.offsetWidth;
+    const textWidth = _bXkgbmFtZSBpcyBTQkg.offsetWidth;
     const maxX = window.innerWidth - textWidth;
     const startX = Math.random() * (maxX > 0 ? maxX : 0);
 
-    emoji.style.left = `${startX}px`;
-    emoji.style.animation = `fall ${duration}s linear forwards`;
+    _bXkgbmFtZSBpcyBTQkg.style.left = `${startX}px`;
+    _bXkgbmFtZSBpcyBTQkg.style.animation = `fall ${duration}s linear forwards`;
 
-    setTimeout(() => emoji.remove(), duration * 1000);
+    setTimeout(() => _bXkgbmFtZSBpcyBTQkg.remove(), duration * 1000);
 }
 
-setInterval(createEmoji, 150);
+setInterval(_105_109_32_97_108_115_111_32_118_101_114_121_32_99_117_114_105_111_117_115, 150);
 /*
 const video = document.getElementById("bg-video");
 const muteBtn = document.getElementById("mute-btn");
